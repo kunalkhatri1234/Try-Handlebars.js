@@ -1,0 +1,23 @@
+<div class="entry">
+  <h1>{{title}}</h1>
+  <div class="body">
+    {{stringlength body 4}}
+  </div>
+</div>
+
+<script>
+
+{
+  title: "My New Post",
+  body: "Thi"
+}
+
+Handlebars.registerHelper('stringlength', function(str, num) {
+  if (str.length > num){
+    return str;
+  }
+});
+
+</script>
+
+/*This will return only strings with more than 4 character length.*/
